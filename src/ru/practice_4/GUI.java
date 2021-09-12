@@ -12,7 +12,6 @@ public class GUI extends JFrame {
     private final JLabel result = new JLabel("Result: " + first_score + "X" + second_score, SwingConstants.CENTER);
     private final JLabel last = new JLabel("Last Scorer: N/A", SwingConstants.CENTER);
     private final JLabel Winner = new JLabel("Winner: DRAW", SwingConstants.CENTER);
-    private final JLabel author = new JLabel("<html>Made by<br> Nikita Derevyankin <br>INBO-02-20", SwingConstants.CENTER);
 
     public GUI () {
         super("Soccer");
@@ -29,8 +28,30 @@ public class GUI extends JFrame {
         container.add(result);
         container.add(last);
         container.add(Winner);
+        JLabel author = new JLabel("<html>Made by<br> Nikita Derevyankin <br>INBO-02-20", SwingConstants.CENTER);
         container.add(author);
 
+        JMenuBar menu = new JMenuBar();
+        menu.add(settings());
+        setJMenuBar(menu);
+
+
+    }
+
+    private JMenu settings() {
+        JMenu settings = new JMenu("Setting");
+        JMenuItem reset = new JMenuItem("Reset");
+        settings.add(reset);
+        reset.addActionListener(e -> {
+             first_score = 0;
+             second_score = 0;
+             result.setText("Result: " + first_score + "X" + second_score);
+             last_scorer = "N/A";
+             last.setText("Last Scorer: " + last_scorer);
+             Winner.setText("Winner: DRAW");
+
+        });
+        return settings;
     }
 
 
