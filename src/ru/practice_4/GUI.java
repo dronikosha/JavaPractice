@@ -8,7 +8,6 @@ public class GUI extends JFrame {
     private int first_score;
     private int second_score;
     private String last_scorer;
-    private String winner;
     private final JLabel result = new JLabel("Result: " + first_score + "X" + second_score, SwingConstants.CENTER);
     private final JLabel last = new JLabel("Last Scorer: N/A", SwingConstants.CENTER);
     private final JLabel Winner = new JLabel("Winner: DRAW", SwingConstants.CENTER);

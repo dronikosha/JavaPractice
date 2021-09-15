@@ -1,6 +1,8 @@
 package ru.practice_5;
 
 
+import java.util.Scanner;
+
 public class Main {
     public static String recursion_1(int n) {
         int s = 0, j = 0;
@@ -112,6 +114,122 @@ public class Main {
         }
     }
 
+    public static int recursion_9(int a, int b) {
+        if (a > b + 1) {
+            return 0;
+        }
+        if (a == 0 || b == 0) {
+            return 1;
+        }
+        return recursion_9(a, b - 1) + recursion_9(a - 1, b - 1);
+    }
+
+    public static int recursion_10(int n, int i) {
+        return (n==0) ? i : recursion_10( n/10, i*10 + n%10 );
+    }
+
+    public static int recursion_11() {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        int m = input.nextInt();
+        if (n == 1) {
+            if (m == 1) {
+                return recursion_11() + n + m;
+            }
+            else {
+                int k = input.nextInt();
+                if (k == 1) {
+                    return recursion_11() + n + m + k;
+                } else {
+                    return n + m + k;
+                }
+            }
+        }
+        else {
+            if (m == 1) {
+                return recursion_11() + n + m;
+            }
+            else {
+                return n + m;
+            }
+        }
+    }
+
+    public static void recursion_12() {
+            Scanner input = new Scanner(System.in);
+            int n = input.nextInt();
+            if (n > 0) {
+                if (n % 2 == 1) {
+                    System.out.println(n);
+                    recursion_12();
+                }
+                else {
+                    recursion_12();
+                }
+            }
+    }
+
+    public static void recursion_13() {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        if (n > 0) {
+            int m = input.nextInt();
+            System.out.println(n);
+            if (m > 0) {
+                recursion_13();
+            }
+        }
+    }
+
+    public static String recursion_14(int n) {
+        if (n < 10) {
+            return Integer.toString(n);
+        }
+        else {
+            return recursion_14(n / 10) + " " + n % 10;
+        }
+    }
+
+    public static int recursion_15(int n) {
+        if (n < 10) {
+            return n;
+        }
+        else {
+            System.out.print(n % 10 + " ");
+            return recursion_15(n / 10);
+        }
+    }
+
+    public static void recursion_16(int max, int count) {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        if (n > 0) {
+            if (n > max) {
+                recursion_16(n, 1);
+            }
+            else if (n == max) {
+                recursion_16(max, ++count);
+            }
+            else {
+                recursion_16(max, count);
+            }
+        }
+        else {
+            System.out.println(count);
+        }
+    }
+
+    public static int recursion_17() {
+        Scanner input = new Scanner(System.in);
+        int n = input.nextInt();
+        if (n == 0) {
+            return 0;
+        }
+        else {
+            return Math.max(n, recursion_17());
+        }
+    }
+
 
     public static void main(String[] args) {
         System.out.println("Номер 1");
@@ -125,7 +243,19 @@ public class Main {
         System.out.println("\nНомер 7");
         recursion_7(150,2);
         System.out.println("\nНомер 8\n" + recursion_8("radar"));
-
+        System.out.println("\nНомер 9\n" + recursion_9(2, 4));
+        System.out.println("\nНомер 10\n" + recursion_10(123, 0));
+//        System.out.println("\nНомер 11\n");
+//        System.out.println(recursion_11());
+//        System.out.println("\nНомер 12\n");
+//        recursion_12();
+//        System.out.println("\nНомер 13\n");
+//        recursion_13();
+        System.out.println("\nНомер 14\n" + recursion_14(186));
+        System.out.println("\nНомер 15\n");
+        System.out.println(recursion_15(123));
+        System.out.println("\nНомер 16\n");
+        recursion_16(0, 0);
+        System.out.println("\nНомер 17\n" + recursion_17());
     }
 }
-
