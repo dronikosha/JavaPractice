@@ -6,6 +6,10 @@ public class Student implements Comparable<Student> {
     private int mark;
     private int ID;
 
+    public Student() {
+        
+    }
+
     public int getMark() {
         return mark;
     }

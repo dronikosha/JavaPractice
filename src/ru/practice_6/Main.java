@@ -19,29 +19,34 @@ public class Main {
         stud.add(nikolay);
         stud.add(vanya);
 
-        System.out.println("COMPARABLE\n");
+        System.out.println("\nCOMPARABLE\n");
         Collections.sort(stud);
         System.out.println(stud);
 
 
         System.out.println("\nCOMPARATOR\n");
 
-        List<SortingStudentsByGPA> student = new ArrayList<>();
+        List<Student> student = new ArrayList<>();
 
-        SortingStudentsByGPA oleg = new SortingStudentsByGPA(5,"Oleg", "89104268586", 5);
-        SortingStudentsByGPA maksim = new SortingStudentsByGPA(7,"Maksim", "89164264566", 3);
-        SortingStudentsByGPA nastya = new SortingStudentsByGPA(8,"Nastya", "89109267312", 2);
-        SortingStudentsByGPA alisa = new SortingStudentsByGPA(6,"Alisa", "89194062516", 4);
+        Student oleg = new Student(6,"Oleg", "89104268586", 5);
+        Student maksim = new Student(8,"Maksim", "89164264566", 3);
+        Student nastya = new Student(7,"Nastya", "89109267312", 2);
+        Student alisa = new Student(5,"Alisa", "89194062516", 4);
 
         student.add(oleg);
         student.add(maksim);
         student.add(nastya);
         student.add(alisa);
 
-        Comparator<SortingStudentsByGPA> markComparator = new SortingStudentsByGPA();
+        Comparator markComparator = new SortingStudentsByGPA();
         student.sort(markComparator);
         System.out.println(student);
 
-        System.out.println("\nTwo Lists\n" + stud + student);
+        List<Student> twoLists = new ArrayList<>();
+        twoLists.addAll(stud);
+        twoLists.addAll(student);
+
+        twoLists.sort(markComparator);
+        System.out.println("\n\nTWO SORTED LISTS\n\n" + twoLists);
     }
 }
