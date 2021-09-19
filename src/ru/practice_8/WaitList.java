@@ -5,14 +5,14 @@ import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class WaitList <E> implements IWaitList<E>{
-    Queue<E> content = new ConcurrentLinkedQueue<E>();
+    protected ConcurrentLinkedQueue<E> content;
 
     public WaitList() {
-
+        content = new ConcurrentLinkedQueue<>();
     }
 
-    public WaitList(Collection<E> c) {
-        content.addAll(c);
+    public WaitList(ConcurrentLinkedQueue<E> c) {
+        this.content = c;
     }
 
     @Override

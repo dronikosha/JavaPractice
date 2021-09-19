@@ -247,8 +247,8 @@ public class Main {
         System.out.println("\nНомер 10\n" + recursion_10(123, 0));
 //        System.out.println("\nНомер 11\n");
 //        System.out.println(recursion_11());
-//        System.out.println("\nНомер 12\n");
-//        recursion_12();
+        System.out.println("\nНомер 12\n");
+        recursion_12();
 //        System.out.println("\nНомер 13\n");
 //        recursion_13();
         System.out.println("\nНомер 14\n" + recursion_14(186));
