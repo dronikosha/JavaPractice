@@ -14,18 +14,18 @@ public class Main {
         int count = 0;
         for (int i = 0; i < 106; i++) {
             count++;
-            if (((first.get(0) == 0) && (second.get(0) == 9)) ||
-                    first.get(0) > second.get(0) && ((first.get(0) != 9) && (second.get(0) != 0))) {
-                first.add(first.get(0));
-                first.add(second.get(0));
+            if (((first.peek() == 0) && (second.peek() == 9)) ||
+                    first.peek() > second.peek() && ((first.peek() != 9) && (second.peek() != 0))) {
+                first.push(first.peek());
+                first.push(second.peek());
             }
-            else if (first.get(0) < second.get(0) || ((first.get(0) == 9) &&
-                    (second.get(0) == 0))) {
-                second.add(first.get(0));
-                second.add(second.get(0));
+            else if (first.peek() < second.peek() || ((first.peek() == 9) &&
+                    (second.peek() == 0))) {
+                second.push(first.peek());
+                second.push(second.peek());
             }
-            second.remove(0);
-            first.remove(0);
+            second.pop();
+            first.pop();
             if (second.empty()) {
                 return "first " + count;
             }

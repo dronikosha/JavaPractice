@@ -239,14 +239,14 @@ public class Main {
         System.out.println("\nНомер 4\n" + recursion_4(0,0,3,15));
         System.out.println("\nНомер 5\n" + recursion_5(25));
         System.out.println("\nНомер 6");
-        System.out.println((recursion_6(18, 2)) ? "YES" : "NO");
+        System.out.println((recursion_6(6, 2)) ? "YES" : "NO");
         System.out.println("\nНомер 7");
         recursion_7(150,2);
         System.out.println("\nНомер 8\n" + recursion_8("radar"));
         System.out.println("\nНомер 9\n" + recursion_9(2, 4));
         System.out.println("\nНомер 10\n" + recursion_10(123, 0));
-//        System.out.println("\nНомер 11\n");
-//        System.out.println(recursion_11());
+        System.out.println("\nНомер 11\n");
+        System.out.println(recursion_11());
         System.out.println("\nНомер 12\n");
         recursion_12();
 //        System.out.println("\nНомер 13\n");

@@ -1,7 +1,6 @@
 package ru.practice_8;
 
 import java.util.Collection;
-import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;
 
 public class WaitList <E> implements IWaitList<E>{
@@ -9,10 +8,6 @@ public class WaitList <E> implements IWaitList<E>{
 
     public WaitList() {
         content = new ConcurrentLinkedQueue<>();
-    }
-
-    public WaitList(ConcurrentLinkedQueue<E> c) {
-        this.content = c;
     }
 
     @Override
