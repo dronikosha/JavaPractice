@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public class LabClass {
     private final ArrayList<Student> studentsList;
-    Student reqStudent;
 
     public LabClass() {
         this.studentsList = new ArrayList<>();
@@ -18,8 +17,7 @@ public class LabClass {
     public Student search(String studentsName) throws NoStudentException {
         for (Student student : studentsList) {
             if (student.getName().equals(studentsName)) {
-                reqStudent = student;
-                return reqStudent;
+                return student;
             }
         }
         throw new NoStudentException("Student " + studentsName + " was not found");

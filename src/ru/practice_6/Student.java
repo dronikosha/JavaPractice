@@ -1,6 +1,6 @@
 package ru.practice_6;
 
-public class Student implements Comparable<Student> {
+public class Student {
     private String name;
     private String phone;
     private int mark;
@@ -59,9 +59,5 @@ public class Student implements Comparable<Student> {
                 "}\n";
     }
 
-    @Override
-    public int compareTo(Student o) {
-        return this.getID() - o.getID();
-    }
 }
 
