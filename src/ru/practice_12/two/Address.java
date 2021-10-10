@@ -40,7 +40,7 @@ public class Address {
         int i = 0, j = 0;
         Address address = new Address();
         System.out.println("Первое задание:");
-        String str1 = "Россия,97,Долгопрудный,Лихачи,7,12/2,45";
+        String str1 = "Россия,  97,Долгопрудный   ,Лихачи,7,   12/2,45";
         System.out.println(str1 = str1.replaceAll(" ", ""));
         for (String data : str1.split(",")) {
             address.AddAddress(data, i);
@@ -50,9 +50,9 @@ public class Address {
 
 
         System.out.println("Второе задание:");
-        String str2 = "Россия,97,Долгопрудный:Лихачи; 52,12/2.45";
+        String str2 = "Россия,97,Долгопрудный:Лихачи; 7,12/2.45";
         System.out.println(str2 = str2.replaceAll(" ", ""));
-        StringTokenizer st = new StringTokenizer(str2, ",.;-");
+        StringTokenizer st = new StringTokenizer(str2, ",.;-:");
         while (st.hasMoreTokens()) {
             address.AddAddress(st.nextToken(), j);
             j++;

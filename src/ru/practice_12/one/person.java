@@ -20,7 +20,6 @@ public class person {
             return (second_name);
         } else {
             return (second_name + " " + first_name + " " + patronymic);
-
         }
     }
 
