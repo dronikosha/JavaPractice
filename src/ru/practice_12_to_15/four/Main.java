@@ -1,4 +1,4 @@
-package ru.practice_12.four;
+package ru.practice_12_to_15.four;
 
 
 public class Main {

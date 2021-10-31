@@ -1,4 +1,4 @@
-package ru.practice_12.two;
+package ru.practice_12_to_15.two;
 
 import java.util.StringTokenizer;
 

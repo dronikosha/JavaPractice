@@ -1,4 +1,4 @@
-package ru.practice_12.three;
+package ru.practice_12_to_15.three;
 
 public class Shirt {
     private final String[] shirt = new String[11];

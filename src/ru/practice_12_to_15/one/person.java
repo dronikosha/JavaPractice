@@ -1,4 +1,4 @@
-package ru.practice_12.one;
+package ru.practice_12_to_15.one;
 
 public class person {
     private String first_name;
