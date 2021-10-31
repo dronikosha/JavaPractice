@@ -1,5 +1,7 @@
 package ru.practice_16.items;
 
+import org.jetbrains.annotations.NotNull;
+
 public class Drink implements Item {
     private int price;
     private String name;
@@ -13,7 +15,7 @@ public class Drink implements Item {
         this.name = name;
         this.description = description;
     }
-    public Drink(String name, String description) throws IllegalArgumentException{
+    public Drink(@NotNull String name, String description) throws IllegalArgumentException{
         if(name.equals("") || description.equals(""))
             throw new IllegalArgumentException();
 

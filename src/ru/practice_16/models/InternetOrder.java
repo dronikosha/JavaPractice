@@ -1,6 +1,7 @@
 package ru.practice_16.models;
 
 
+import org.jetbrains.annotations.NotNull;
 import ru.practice_16.items.Item;
 import ru.practice_16.lists.OrderList;
 
@@ -10,7 +11,7 @@ public class InternetOrder implements Order {
     public InternetOrder() {
     }
 
-    public InternetOrder(Item[] k) {
+    public InternetOrder(Item @NotNull [] k) {
         for (Item item : k) list.add(item);
     }
 

@@ -1,5 +1,7 @@
 package ru.practice_16.lists;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.NoSuchElementException;
 
 public class OrderList<T> {
@@ -55,7 +57,7 @@ public class OrderList<T> {
         return size;
     }
 
-    public Node getNext(Node current){
+    public Node getNext(@NotNull Node current){
         return current.next;
     }
 
