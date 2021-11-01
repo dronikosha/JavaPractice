@@ -3,9 +3,9 @@ package ru.practice_16.items;
 import org.jetbrains.annotations.NotNull;
 
 public class Dish implements Item {
-    private int price;
-    private String name;
-    private String description;
+    private final int price;
+    private final String name;
+    private final String description;
 
     public Dish(int price, String name, String description) throws IllegalArgumentException{
         if(price < 0 || name.equals("") || description.equals(""))
